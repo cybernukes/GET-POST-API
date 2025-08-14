@@ -13,7 +13,7 @@ def receive_from_hardware():
     data = request.get_json()
     received_number = data.get('number')
     reply_number = None
-    return jsonify({"message": "Number received!"})
+    return jsonify({"message": "Number received!", "Number": received_number})
 
 @app.route('/dashboard')
 def dashboard():
